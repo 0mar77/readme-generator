@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
-const inquirer = request('inquirer');
-const fs = request('fs');
+const inquirer = require('inquirer');
+const fs = require('fs');
 const { generateMarkdown } = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
 const questions = [
@@ -18,25 +18,25 @@ const questions = [
 
     {
         type: 'input',
-        name: 'Description',
+        name: 'DescriptionFirst',
         message: 'What was your motivation for building this project?'
     },
 
     {
         type: 'input',
-        name: 'Description',
+        name: 'DescriptionSecond',
         message: 'Why did you build this project?'
     },
 
     {
         type: 'input',
-        name: 'Description',
+        name: 'DescriptionThird',
         message: 'What problem does it solve?'
     },
 
     {
         type: 'input',
-        name: 'Description',
+        name: 'DescriptionForth',
         message: 'What did you learn creating this project'
     },
 
@@ -89,7 +89,13 @@ const questions = [
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer
+    .prompt(questions)
+    .then((answers) => {
+        console.log(answers)
+    })
+}
 
 // Function call to initialize app
 init();
