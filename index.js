@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { generateMarkdown } = require('./utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -36,7 +36,7 @@ const questions = [
 
     {
         type: 'input',
-        name: 'DescriptionForth',
+        name: 'DescriptionFourth',
         message: 'What did you learn creating this project'
     },
 
@@ -74,7 +74,7 @@ const questions = [
 
     {
         type: 'input',
-        name: 'Github Username',
+        name: 'GithubUsername',
         message: 'What is your Github username?'
     },
 
@@ -90,6 +90,8 @@ function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (error) => {
         if (error) {
             console.log(error);
+        } else {
+            console.log(data)
         }
     })
 }
@@ -100,9 +102,8 @@ function init() {
     .prompt(questions)
     .then((answers) => {
         console.log(answers);
-
+        writeToFile('README.md', generateMarkdown(answers))
     })
-    writeToFile('README.md', 'placeholder')
 }
 
 // Function call to initialize app
