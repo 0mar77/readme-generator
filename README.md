@@ -1,28 +1,19 @@
+# README Generator
 
-  # 1
+# Description
 
-  # Description
-  - 1
-  - 1
-  - 1
-  - 1
+- The motivation behind this project was to help the user focus on his project and not the README file
+- I built this project to help the user focus on his project
+- This project will help the user save time 
+- Creating this project helped me learn how to use inquierer
 
-  # Installation
-  - 1
+# Usage
+- To initaite the app, type "node index.js" into the termnial 
+- Answer the questions and done!!
 
-  # Usage
-  - 1
+- Path to sample README: assets/README.md
 
-  # Contributing
-  - 1
+Link to walkthrough video:[https://drive.google.com/file/d/1s9ytzyxpc7ak7OW-_iZM1EeKVxocsbtF/view?usp=sharing]
 
-  # Tests
-  - 1
-  
-  # License
-  - None
-
-  # Questions
-  - 1
-  - 1
-
+![User Answers](assets/images/terminal-answers.png)
+![Sample README from video](assets/images/sample-readme.png)
